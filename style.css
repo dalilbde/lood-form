@@ -1,0 +1,614 @@
+/*Global*/
+body{
+    font-family: 'Montserrat', 'Average Sans', 'Hind Madurai';
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #444;
+    list-style: none;
+    text-decoration: none;
+}
+
+.title{
+    margin-top: 5%;
+    text-align: center;
+    color: rgb(64, 82, 243);
+    font-size: 35px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    text-align: center;
+    color: rgb(64, 82, 243);
+    font-size: 30px;
+}
+
+p{
+    color: rgb(70, 70, 70);
+    font-size: 18px;
+}
+
+span{
+    border-bottom: 3px solid rgb(64, 82, 243);
+    color: rgb(64, 82, 243);
+    padding-bottom: 5px;
+}
+
+.double{
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgb(64, 82, 243);
+    border-top: 3px solid rgb(64, 82, 243);
+    padding-top: 5px;
+}
+
+
+/*Navbar*/
+.navbar{
+    position: fixed;
+    float: right;
+    display: flex;
+    flex-direction: right;
+    background-color: rgb(0, 155, 221);
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    box-shadow: 5px 5px transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    list-style: none;
+    margin-left: 25%;
+}
+
+.logo a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    float: left;
+}
+
+.logo{
+    margin-right: 10%;
+}
+
+.navbar ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    float: right;
+    position: relative;
+    display: block;
+    padding: 2px 20px;
+    margin: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #262626;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+}
+
+.navbar ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #FFD700;
+    border-bottom: 1px solid #FFD700;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.navbar ul li a:hover:before{
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+
+.navbar ul li a:after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFD700;
+    transform: scale(0);
+    transition: .5s;
+    z-index: -1;
+}
+
+
+.navbar ul li a:hover:after{
+    transform: scale(1);
+}
+
+.navbar ul li a{
+    color: white;
+    margin-left: 0;
+}
+
+.button{
+    background-color: rgb(0, 155, 221);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 50%;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color:  #FFD700;
+    color: #fff;
+}
+
+.button a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+}
+
+/*footer*/
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: rgb(0, 155, 221);
+    width: auto;
+    z-index: 1;
+}
+
+footer .created ul li{
+    display: inline-flex;
+    list-style: none;
+}
+
+footer .created ul li a{
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    padding: 2px 20px;
+}
+
+footer p{
+    font-size: 10px;
+    position: relative;
+}
+
+.created{
+    position: relative;
+    text-align: center;
+}
+
+.footer_line{
+    margin-left: 21%;
+    margin-top: 30%;
+    width: 60%;
+    background-color: rgba(64, 82, 243, 0);
+    height: 10px;
+    border-radius: 5px;
+}
+
+.footer_line_about{
+    margin-left: 21%;
+    margin-top: 18%;
+    width: 60%;
+    background-color: rgba(64, 82, 243, 0);
+    height: 10px;
+    border-radius: 5px;
+}
+
+/*Home Page*/
+
+.banner-area{
+    min-height: 700px;
+    position: relative;
+    background-image: url(../images/3Kwt8r-A.jpeg);
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 5px solid rgb(0, 155, 221);
+}
+
+
+/*boxes*/
+.content{
+    background-color: rgba(185, 185, 185, 0.100);
+}
+
+.wdwd{
+    text-align: center;
+    color: rgb(64, 82, 243);
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10%;
+}
+
+.content{
+    color: black;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.content .box{
+    float: left;
+    text-align: center;
+    padding-bottom: 28px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.images{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box{
+    padding:3px;
+    margin:2%;
+    background:white;
+    border:1px solid #d6d6d6;
+    box-shadow:0 2px 3px 0px rgba(0, 0, 0, 0.377);
+    border-radius:3px;
+}
+
+/*who are we*/
+
+.whoarewe{
+    padding-left: 1%;
+}
+
+.whoarewe p{
+    margin: 0 15% 0 15%;
+    padding: 1%;
+    font-size: 17px;
+}
+
+.video{
+    padding-top:5%;
+    text-align: center;
+    display: block;
+}
+
+/*mission and vision*/
+
+.missionvision{
+    height: 500px;
+}
+
+.textv{
+    float: right;
+    width: 25%;
+    padding-right: 20%;
+    padding-top: 5%;
+}
+
+.textv h2{
+    color: rgb(64, 82, 243);
+}
+
+.happyvision{
+    float: right;
+    margin-right: 5%;
+    padding-top: 5%;
+}
+
+.textm{
+    padding-top: 5%;
+    float: left;
+    width: 25%;
+    padding-left: 20%;
+    margin-left: 1%;
+}
+
+.textm h2{
+    color: rgb(64, 82, 243);
+}
+
+.happyschool{
+    padding-top: 5%;
+    float: left;
+    margin-left: 5%;
+}
+
+
+
+
+/*About us*/
+
+.liner1{
+    width: 60%;
+    background-color: rgba(64, 82, 243, 0);
+    height: 10px;
+    border-radius: 5px;
+}
+
+h1 .title{
+    text-align: center;
+    color: rgb(64, 82, 243);
+    font-size: 30px;
+}
+
+/*Scholarship*/
+
+.about{
+    width: 25%;
+    text-align: left;
+    padding-top: 5%;
+    padding-left: 25%;
+}
+
+
+.about h2{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.about span{
+    color: rgb(64, 82, 243);
+    font-weight: 900;
+}
+
+.about_image{
+    float: right;
+    margin-top: -17%;
+    margin-right: 15%;
+}
+
+/*Football*/
+
+.football{
+    width: 25%;
+    text-align: left;
+    float: left;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+.football h2{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.football_image{
+    padding-left: 25%;
+    padding-top: 5%;
+    float: left;
+}
+
+.football span{
+    color: rgb(64, 82, 243);
+    font-weight: 900;
+}
+
+/*Health*/
+
+.health{
+    float: left;
+    width: 25%;
+    text-align: left;
+    padding-top: 2%;
+    padding-left: 25%;
+    padding-right: 5%;
+}
+
+.health h2{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.health span{
+    color: rgb(64, 82, 243);
+    font-weight: 900;
+}
+
+.health_image{
+    float: left;
+    padding-top: 5%;
+}
+
+/*Contact*/
+
+.liner{
+    width: 60%;
+    background-color: rgba(64, 82, 243, 0);
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+.container{
+    max-width: 800px;
+    height: 700px;
+    background: #fff;
+    margin: 50px auto;
+    box-shadow: 0 0 20px rgba(72,98,85, 0.6);
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.container p{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: rgb(0, 155, 221);
+}
+
+.input,
+.msg .area{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 2px solid #e9eaea;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    transform: all 0.5s ease;
+}
+
+.login .input{
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.login .input:last-child{
+    margin-right: 0;
+}
+
+.msg .area{
+    height: 200px;
+    font-family: 'Montserrat', 'Average Sans', 'Hind Madurai';
+}
+
+.btn{
+    width: 250px;
+    background: rgb(0, 155, 221);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.input:focus,
+.msg .area:focus{
+    border: 2px solid rgb(0, 155, 221);
+}
+
+/*Get Involved Page*/
+
+.involved h1{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.gridcontainer{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 40%;
+    padding-left: 30%;
+    grid-gap: 50px;
+}
+
+.involvedimages{
+    float: left;
+}
+
+/*Donate Page*/
+
+.donatepage h1{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.imagesdonate{
+    margin-left: 30%;
+}
+
+.containergrid1{
+    display: grid;
+    grid-template-columns: 200px 200px 100px 200px;
+    width: 35%;
+    padding-left: 30%;
+    grid-gap: 50px;
+}
+
+.donateinfo{
+    grid-column: 1 / span 2;
+}
+
+.gofund{
+    grid-column: 3 / span 4;
+}
+
+.gobutton{
+    background-color: rgb(0, 155, 221);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+}
+
+.gobutton:hover{
+    transform: scale(1.1);
+}
+
+.gobutton a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+}
+
+.paypal{
+    transition: all 0.8s ease-in-out;
+}
+
+.paypal:hover{
+    transform: scale(1.1);
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+}
